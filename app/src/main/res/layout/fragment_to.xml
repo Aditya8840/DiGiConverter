@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF6F6"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ToFragment">
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <soup.neumorphism.NeumorphTextView
+            android:id="@+id/neumorphTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/acme"
+            android:text="Enter Binary Number"
+            android:textColor="#132E4E"
+            android:textSize="@dimen/_25sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_shadowElevation="@dimen/_2sdp" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/neumorphCardView6"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:layout_constraintBottom_toTopOf="@+id/neumorphCardView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neumorphTextView"
+            app:neumorph_shapeType="basin">
+
+            <EditText
+                android:id="@+id/number"
+                android:digits="01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@null"
+                android:fontFamily="@font/acme"
+                android:hint="Enter Number"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textColorHint="#7C7777"
+                android:textSize="@dimen/_15sdp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/neumorphCardView5"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:neumorph_shapeType="flat">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_2sdp"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:text="Convert"
+                android:textColor="#132E4E"
+                android:textSize="@dimen/_15sdp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/acme"
+            android:text="Output"
+            android:textColor="#132E4E"
+            android:textSize="@dimen/_25sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/neumorphCardView7"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:layout_constraintBottom_toTopOf="@+id/neumorphCardView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:neumorph_shapeType="basin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/result_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+                    android:text="0"
+                    android:textColor="#132E4E"
+                    android:textSize="@dimen/_20sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/neumorphCardView8"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:neumorph_shapeType="flat"
+            app:layout_constraintTop_toBottomOf="@id/neumorphCardView7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+                    android:text="Reset"
+                    android:textColor="#132E4E"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
